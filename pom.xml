@@ -699,16 +699,15 @@ Bundle-DocURL:
       </dependency>
       <dependency>
         <groupId>com.adobe.cq</groupId>
-        <artifactId>core.wcm.components.config</artifactId>
+        <artifactId>core.wcm.components.all</artifactId>
         <type>zip</type>
         <version>${core.wcm.components.version}</version>
       </dependency>
       <dependency>
         <groupId>com.adobe.cq</groupId>
-        <artifactId>core.wcm.components.all</artifactId>
+        <artifactId>core.wcm.components.config</artifactId>
         <type>zip</type>
         <version>${core.wcm.components.version}</version>
-        <scope>provided</scope>
       </dependency>
       <!-- Testing -->
       <dependency>

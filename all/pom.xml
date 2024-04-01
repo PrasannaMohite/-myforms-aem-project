@@ -94,14 +94,28 @@
                             <type>zip</type>
                             <target>/apps/myforms-vendor-packages/application/install</target>
                         </embedded>
-                        <subPackages>
-                            <subPackage>
-                                <groupId>com.adobe.cq</groupId>
-                                <artifactId>core.wcm.components.all</artifactId>
-                                <filter>true</filter>
-                            </subPackage>
-                        </subPackages>
+                        <embedded>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.wcm.components.all</artifactId>
+                            <type>zip</type>
+                            <target>/apps/myforms-vendor-packages/application/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.acs</groupId>
+                            <artifactId>acs-aem-commons-all</artifactId>
+                            <type>zip</type>
+                            <target>/apps/myforms-vendor-packages/container/install</target>
+                            <filter>true</filter>
+                            <isAllVersionsFilter>true</isAllVersionsFilter>
+                        </embedded>
                     </embeddeds>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.cq</groupId>
+                            <artifactId>core.wcm.components.all</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
                 </configuration>
             </plugin>
             <plugin>
@@ -222,6 +236,12 @@
         <dependency>
             <groupId>com.adobe.cq</groupId>
             <artifactId>core.wcm.components.all</artifactId>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-all</artifactId>
+            <version>6.5.0</version>
             <type>zip</type>
         </dependency>
     </dependencies>
